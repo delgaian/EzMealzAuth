@@ -1,0 +1,91 @@
+:root {
+    --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+.container-xxL {max-width: 1530px;}
+
+body {
+    
+    background-color: rgb(243,243,243);
+
+}
+
+a {color: var(--bs-dark);}
+/* Recipe Category Cards */
+
+
+.nav-item a {
+    color: black !important;
+}
+
+.nav-item a:hover {
+    color: rgb(201, 192, 192) !important;
+}
+.category__link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: 250ms all;
+}
+
+.category__link:hover{
+    transform: scale(1.1);
+}
+
+.category__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+
+.category__img img {
+    width: 100%;
+    object-fit: contain;
+    
+ 
+}
+
+.ezAndHealthyCard {
+    position: relative;
+    bottom: 1.3rem;
+    width: 80%;
+    
+}
+
+.ezAndCheapCard {
+    position: relative;
+    bottom: 3rem;
+    width: 80%;
+    
+}
+
+.ezWithPressureCookerCard {
+    position: relative;
+    top: 1rem;
+    width: 80%;
+    
+}
+
+.view-all-card {
+    position: relative;
+    top: .1rem;
+    width: 80%;
+    height: 200%;
+}
+
+.category__img--large {
+    height: 260px;
+}
+
+.submit-image {
+    width: 25%;
+    height: 25%;
+}
+

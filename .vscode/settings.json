@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/22ee674d-7994-4a19-93c1-a56c32c53db0/AppServices/subscriptions/22ee674d-7994-4a19-93c1-a56c32c53db0/resourceGroups/EzMealz-rg/providers/Microsoft.Web/sites/EzMealz",
+    "appService.deploySubpath": "."
+}
