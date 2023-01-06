@@ -189,222 +189,222 @@ exports.contact = async(req, res) => {
                 
 //             },
 
-            // {
-            //     "name": "Creamy Chicken and Broccoli",
-            //     "description": "Broccoli has a bad reputation. Change people's minds with this easy and healthy recipe!",
-            //     "link": "https://healthyfitnessmeals.com/chicken-and-broccoli/",
-            //     "category": "Ez and Healthy",
-            //     "image": "chickenAndBroccoli.jpg"
+//             {
+//                 "name": "Creamy Chicken and Broccoli",
+//                 "description": "Broccoli has a bad reputation. Change people's minds with this easy and healthy recipe!",
+//                 "link": "https://healthyfitnessmeals.com/chicken-and-broccoli/",
+//                 "category": "Ez and Healthy",
+//                 "image": "chickenAndBroccoli.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Sheet Pan Sausage and Veggies",
-            //     "description": "Sneak in some extra vegetables with this ez and healthy sheet pan recipe!",
-            //     "link": "https://www.chelseasmessyapron.com/one-pan-healthy-sausage-and-veggies/",
-            //     "category": "Ez and Healthy",
-            //     "image": "sheetPanSausage.jpg"
+//             {
+//                 "name": "Sheet Pan Sausage and Veggies",
+//                 "description": "Sneak in some extra vegetables with this ez and healthy sheet pan recipe!",
+//                 "link": "https://www.chelseasmessyapron.com/one-pan-healthy-sausage-and-veggies/",
+//                 "category": "Ez and Healthy",
+//                 "image": "sheetPanSausage.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Sheet Pan Pesto Chicken With Rice",
-            //     "description": "Pesto and chicken? Can't go wrong with that! Loaded with protein and vegetables but will still satisfy the pickiest of eaters!",
-            //     "link": "https://thegirlonbloor.com/sheet-pan-pesto-chicken-meal-prep-bowls/",
-            //     "category": "Ez and Healthy",
-            //     "image": "sheetPanPestoChicken.jpg"
+//             {
+//                 "name": "Sheet Pan Pesto Chicken With Rice",
+//                 "description": "Pesto and chicken? Can't go wrong with that! Loaded with protein and vegetables but will still satisfy the pickiest of eaters!",
+//                 "link": "https://thegirlonbloor.com/sheet-pan-pesto-chicken-meal-prep-bowls/",
+//                 "category": "Ez and Healthy",
+//                 "image": "sheetPanPestoChicken.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Tofu Stir Fry",
-            //     "description": "Find out why tofu is a great substitute for meat with this ez and healthy recipe! Serve over rice or your favorite grain!",
-            //     "link": "https://choosingchia.com/weeknight-tofu-stir-fry/",
-            //     "category": "Ez and Healthy",
-            //     "image": "tofuStirFry.jpg"
+//             {
+//                 "name": "Tofu Stir Fry",
+//                 "description": "Find out why tofu is a great substitute for meat with this ez and healthy recipe! Serve over rice or your favorite grain!",
+//                 "link": "https://choosingchia.com/weeknight-tofu-stir-fry/",
+//                 "category": "Ez and Healthy",
+//                 "image": "tofuStirFry.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Roast Chicken With Peppers, Focaccia and Basil Aioli",
-            //     "description": "This meal is not as ez as the other ones, but it will be sure to satisfy. Perfect for a weekend dinner party to impress your friends and family!",
-            //     "link": "https://cooking.nytimes.com/recipes/1020406-roast-chicken-with-peppers-focaccia-and-basil-aioli",
-            //     "category": "Ez and Healthy",
-            //     "image": "roastChicken.jpg"
+//             {
+//                 "name": "Roast Chicken With Peppers, Focaccia and Basil Aioli",
+//                 "description": "This meal is not as ez as the other ones, but it will be sure to satisfy. Perfect for a weekend dinner party to impress your friends and family!",
+//                 "link": "https://cooking.nytimes.com/recipes/1020406-roast-chicken-with-peppers-focaccia-and-basil-aioli",
+//                 "category": "Ez and Healthy",
+//                 "image": "roastChicken.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Pasta With Bacon and Peas",
-            //     "description": "Basic yet delicious! Makes a quick and easy meal that is easy on the budget.",
-            //     "link": "https://www.budgetbytes.com/pasta-with-bacon-and-peas/",
-            //     "category": "Ez and Cheap",
-            //     "image": "pastaWithBaconAndPeas.jpg"
+//             {
+//                 "name": "Pasta With Bacon and Peas",
+//                 "description": "Basic yet delicious! Makes a quick and easy meal that is easy on the budget.",
+//                 "link": "https://www.budgetbytes.com/pasta-with-bacon-and-peas/",
+//                 "category": "Ez and Cheap",
+//                 "image": "pastaWithBaconAndPeas.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Ramen",
-            //     "description": "Spice up your Ramen with this easy and yummy recipe!",
-            //     "link": "https://pinchofyum.com/quick-homemade-ramen",
-            //     "category": "Ez and Cheap",
-            //     "image": "ezAndCheapRamen.jpg"
+//             {
+//                 "name": "Ramen",
+//                 "description": "Spice up your Ramen with this easy and yummy recipe!",
+//                 "link": "https://pinchofyum.com/quick-homemade-ramen",
+//                 "category": "Ez and Cheap",
+//                 "image": "ezAndCheapRamen.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Green Curry Glazed Tofu",
-            //     "description": "This recipe is packed with flavor that goes great with tofu! Substitute chicken if tofu is not your thing.",
-            //     "link": "https://cooking.nytimes.com/recipes/1023248-green-curry-glazed-tofu",
-            //     "category": "Ez and Cheap",
-            //     "image": "greenCurryGlazedTofu.jpg"
+//             {
+//                 "name": "Green Curry Glazed Tofu",
+//                 "description": "This recipe is packed with flavor that goes great with tofu! Substitute chicken if tofu is not your thing.",
+//                 "link": "https://cooking.nytimes.com/recipes/1023248-green-curry-glazed-tofu",
+//                 "category": "Ez and Cheap",
+//                 "image": "greenCurryGlazedTofu.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Vegan Spicy Thai Tofu Tacos",
-            //     "description": "This recipe is sure to please vegan and non-vegan folks alike. Easy and customizable!",
-            //     "link": "https://www.jaroflemons.com/vegan-spicy-thai-tofu-tacos/",
-            //     "category": "Ez and Cheap",
-            //     "image": "tofuTacos.jpg"
+//             {
+//                 "name": "Vegan Spicy Thai Tofu Tacos",
+//                 "description": "This recipe is sure to please vegan and non-vegan folks alike. Easy and customizable!",
+//                 "link": "https://www.jaroflemons.com/vegan-spicy-thai-tofu-tacos/",
+//                 "category": "Ez and Cheap",
+//                 "image": "tofuTacos.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Honey Garlic Tofu",
-            //     "description": "Easy and flavorful recipe that requires little ingredients! Sneak in some broccoli or your favorite vegetable.",
-            //     "link": "https://www.walderwellness.com/honey-garlic-tofu-soy-sesame/",
-            //     "category": "Ez and Cheap",
-            //     "image": "honeyGarlicTofu.jpg"
+//             {
+//                 "name": "Honey Garlic Tofu",
+//                 "description": "Easy and flavorful recipe that requires little ingredients! Sneak in some broccoli or your favorite vegetable.",
+//                 "link": "https://www.walderwellness.com/honey-garlic-tofu-soy-sesame/",
+//                 "category": "Ez and Cheap",
+//                 "image": "honeyGarlicTofu.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Baked Brie",
-            //     "description": "This easy and simple dish will make your taste buds dance with flavor! Pairs nicely with your favorite crackers and breads.",
-            //     "link": "https://www.provecho.bio/@yessidothecookingg/baked-brie",
-            //     "category": "Ez and Cheap",
-            //     "image": "bakedBrie.jpg"
+//             {
+//                 "name": "Baked Brie",
+//                 "description": "This easy and simple dish will make your taste buds dance with flavor! Pairs nicely with your favorite crackers and breads.",
+//                 "link": "https://www.provecho.bio/@yessidothecookingg/baked-brie",
+//                 "category": "Ez and Cheap",
+//                 "image": "bakedBrie.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Tofu Tikka Masala",
-            //     "description": "Tofu makes an excellent protein alternative to chicken in this easy and healthy recipe! Pair with brown rice and veggies for a fuller meal.",
-            //     "link": "https://www.cookwithmanali.com/tofu-tikka-masala/",
-            //     "category": "Ez and Healthy",
-            //     "image": "tofuTikkaMasala.jpg"
+//             {
+//                 "name": "Tofu Tikka Masala",
+//                 "description": "Tofu makes an excellent protein alternative to chicken in this easy and healthy recipe! Pair with brown rice and veggies for a fuller meal.",
+//                 "link": "https://www.cookwithmanali.com/tofu-tikka-masala/",
+//                 "category": "Ez and Healthy",
+//                 "image": "tofuTikkaMasala.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Crispy Mushroom Focaccia",
-            //     "description": "Ez, delicious, and uses many ingredients that are on hand! How could we not include it.",
-            //     "link": "https://cooking.nytimes.com/recipes/1021818-crispy-mushroom-focaccia",
-            //     "category": "Ez and Cheap",
-            //     "image": "mushroomFoccicia.jpg"
+//             {
+//                 "name": "Crispy Mushroom Focaccia",
+//                 "description": "Ez, delicious, and uses many ingredients that are on hand! How could we not include it.",
+//                 "link": "https://cooking.nytimes.com/recipes/1021818-crispy-mushroom-focaccia",
+//                 "category": "Ez and Cheap",
+//                 "image": "mushroomFoccicia.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Instant Pot Pasta Cajun Chicken Alfredo",
-            //     "description": "Perfect for the busy weeknight. Flavorful and rich, let your pressure cooker do most of the work!",
-            //     "link": "https://www.number-2-pencil.com/instant-pot-pasta-cajun-chicken-alfredo/",
-            //     "category": "Ez with Pressure Cooker",
-            //     "image": "cajunPasta.jpg"
+//             {
+//                 "name": "Instant Pot Pasta Cajun Chicken Alfredo",
+//                 "description": "Perfect for the busy weeknight. Flavorful and rich, let your pressure cooker do most of the work!",
+//                 "link": "https://www.number-2-pencil.com/instant-pot-pasta-cajun-chicken-alfredo/",
+//                 "category": "Ez with Pressure Cooker",
+//                 "image": "cajunPasta.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Instant Pot Italian Pot Roast",
-            //     "description": "Discover the wonders that a pressure cooker can do with this recipe!",
-            //     "link": "https://oursaltykitchen.com/instant-pot-pot-roast/",
-            //     "category": "Ez with Pressure Cooker",
-            //     "image": "instantPotRoast.jpg"
+//             {
+//                 "name": "Instant Pot Italian Pot Roast",
+//                 "description": "Discover the wonders that a pressure cooker can do with this recipe!",
+//                 "link": "https://oursaltykitchen.com/instant-pot-pot-roast/",
+//                 "category": "Ez with Pressure Cooker",
+//                 "image": "instantPotRoast.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Instant Pot Pork Stew",
-            //     "description": "Impress that special someone with this flavorful and rich recipe! Your pressure cooker won't mind you taking all the credit.",
-            //     "link": "https://cooking.nytimes.com/recipes/1022659-instant-pot-pork-stew-with-red-wine-and-olives",
-            //     "category": "Ez with Pressure Cooker",
-            //     "image": "instantPotPork.jpg"
+//             {
+//                 "name": "Instant Pot Pork Stew",
+//                 "description": "Impress that special someone with this flavorful and rich recipe! Your pressure cooker won't mind you taking all the credit.",
+//                 "link": "https://cooking.nytimes.com/recipes/1022659-instant-pot-pork-stew-with-red-wine-and-olives",
+//                 "category": "Ez with Pressure Cooker",
+//                 "image": "instantPotPork.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Chickpea Coconut Curry",
-            //     "description": "Serve this dish over your favorite grain for a full and complete meal! Or serve by itself, it will be sure to please either way.",
-            //     "link": "https://www.indianveggiedelight.com/chickpea-coconut-curry-instant-pot/",
-            //     "category": "Ez with Pressure Cooker",
-            //     "image": "coconutCurry.jpg"
+//             {
+//                 "name": "Chickpea Coconut Curry",
+//                 "description": "Serve this dish over your favorite grain for a full and complete meal! Or serve by itself, it will be sure to please either way.",
+//                 "link": "https://www.indianveggiedelight.com/chickpea-coconut-curry-instant-pot/",
+//                 "category": "Ez with Pressure Cooker",
+//                 "image": "coconutCurry.jpg"
                 
-            // },
+//             },
 
 
-            // {
-            //     "name": "Slow-Cooker Chicken Tortellini Tomato Soup",
-            //     "description": "This recipe is simple yet delicious, it feels like cheating! Discover the power of slow cookers with this recipe.",
-            //     "link": "https://cooking.nytimes.com/recipes/1020481-slow-cooker-chicken-tortellini-tomato-soup",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "tortelliniSoup.jpg"
+//             {
+//                 "name": "Slow-Cooker Chicken Tortellini Tomato Soup",
+//                 "description": "This recipe is simple yet delicious, it feels like cheating! Discover the power of slow cookers with this recipe.",
+//                 "link": "https://cooking.nytimes.com/recipes/1020481-slow-cooker-chicken-tortellini-tomato-soup",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "tortelliniSoup.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker Pozole",
-            //     "description": "Discover why pozole is a renowned recipe within the Mexican culture! Impress your friends with the simple and yummy recipe!",
-            //     "link": "https://www.tasteofhome.com/recipes/slow-cooker-pork-pozole/",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "slowCookerPozole.jpg"
+//             {
+//                 "name": "Slow-Cooker Pozole",
+//                 "description": "Discover why pozole is a renowned recipe within the Mexican culture! Impress your friends with the simple and yummy recipe!",
+//                 "link": "https://www.tasteofhome.com/recipes/slow-cooker-pork-pozole/",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "slowCookerPozole.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker Creamy Gnocchi Soup",
-            //     "description": "Perfect flavor that will warm any soul.",
-            //     "link": "https://www.delish.com/cooking/recipe-ideas/a29416622/slow-cooker-creamy-gnocchi-soup-recipe/",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "creamyGnocciSoup.jpg"
+//             {
+//                 "name": "Slow-Cooker Creamy Gnocchi Soup",
+//                 "description": "Perfect flavor that will warm any soul.",
+//                 "link": "https://www.delish.com/cooking/recipe-ideas/a29416622/slow-cooker-creamy-gnocchi-soup-recipe/",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "creamyGnocciSoup.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker kung Pao Chicken",
-            //     "description": "This dish is flavorful on its own, but feel free to add your favorite toppings like peanuts or vegetables! ",
-            //     "link": "https://therecipecritic.com/skinny-slow-cooker-kung-pao-chicken/",
-            //     "category": "Ez with Slow Cooker",
-            //     "image": "kungPaoChicken.jpg"
+//             {
+//                 "name": "Slow-Cooker kung Pao Chicken",
+//                 "description": "This dish is flavorful on its own, but feel free to add your favorite toppings like peanuts or vegetables! ",
+//                 "link": "https://therecipecritic.com/skinny-slow-cooker-kung-pao-chicken/",
+//                 "category": "Ez with Slow Cooker",
+//                 "image": "kungPaoChicken.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker BBQ Chicken",
-            //     "description": "Make this during your next cook out and impress your friends and family! Ez and delicious, we have to include it.",
-            //     "link": "https://www.familyfreshmeals.com/2014/06/best-crockpot-bbq-chicken.html",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "BbqChicken.jpg"
+//             {
+//                 "name": "Slow-Cooker BBQ Chicken",
+//                 "description": "Make this during your next cook out and impress your friends and family! Ez and delicious, we have to include it.",
+//                 "link": "https://www.familyfreshmeals.com/2014/06/best-crockpot-bbq-chicken.html",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "BbqChicken.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker Lasagna",
-            //     "description": "I know, I was skeptical at first too. Now, I wouldn't make lasagna any other way.",
-            //     "link": "https://fitfoodiefinds.com/crock-pot-lasagna/",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "crockPotLasagna1.jpg"
+//             {
+//                 "name": "Slow-Cooker Lasagna",
+//                 "description": "I know, I was skeptical at first too. Now, I wouldn't make lasagna any other way.",
+//                 "link": "https://fitfoodiefinds.com/crock-pot-lasagna/",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "crockPotLasagna1.jpg"
                 
-            // },
+//             },
 
-            // {
-            //     "name": "Slow-Cooker White Chicken Chili",
-            //     "description": "Looking for a hearty and healthy meal? Look no further! Packed with flavor and takes minimum effort.",
-            //     "link": "https://www.delish.com/cooking/recipe-ideas/a25648007/crockpot-white-chicken-chili-recipe/",
-            //     "category": "Ez with Slow-Cooker",
-            //     "image": "whiteChickenChili.jpg"
+//             {
+//                 "name": "Slow-Cooker White Chicken Chili",
+//                 "description": "Looking for a hearty and healthy meal? Look no further! Packed with flavor and takes minimum effort.",
+//                 "link": "https://www.delish.com/cooking/recipe-ideas/a25648007/crockpot-white-chicken-chili-recipe/",
+//                 "category": "Ez with Slow-Cooker",
+//                 "image": "whiteChickenChili.jpg"
                 
-            // },
+//             },
 
 
 //         ]);
