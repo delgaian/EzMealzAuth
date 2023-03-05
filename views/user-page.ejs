@@ -1,0 +1,261 @@
+<div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
+    <!-- define column size for small and large screens -->
+    <div class="col-12 col-lg-6">
+        <img src="/img/EzMealzPictures/gnocciPesto.jpg" width="307" height="210" class="d-block mx-lg-auto img-fluid" loading="lazy" alt="EzMealz">
+    </div>
+
+    <div class="col-12 col-lg-6">
+        <h1 class="display-5 fw-bold mb-3">
+            Welcome <%= user %> to a wide variety of Ez Mealz!
+        </h1>
+        <p class="lead">
+            You don't have to be rich or a fancy chef to eat gourmet! Enjoy our selection of easy decadent meals that 
+            will impress your friends and family! In the words to the famous Chef Gusteu, "Anyone can cook!"
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/latest-recipes" class="btn btn-primary btn-dark btn-lg px-4 me-md-2"> Check out recently cooked recipes!</a>
+            <a href="/surprise-recipe" class="btn btn-outline-secondary btn-lg px-4 me-md-2"> Surprise Me</a>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Catatories Below -->
+
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+
+    
+    <a href="/recipes/Ez-and-Healthy" class="col text-center category__link">
+        <div class="category__img shadow">
+            <img class="ezAndHealthyCard" src="/img/EzMealzPictures/strawberries.jpg" alt="Ez and Healthy" loading="lazy">
+        </div>
+        <div class="pt-1">Ez and Healthy</div>
+    </a>
+     
+    <a href="/recipes/Ez-and-Cheap" class="col text-center category__link">
+        <div class="category__img shadow">
+            <img class="ezAndCheapCard" src="/img/EzMealzPictures/IMG_0010.jpg" alt="Ez and Cheap" loading="lazy">
+        </div>
+        <div class="pt-1">Ez and Cheap</div>
+    </a>
+
+    <a href="/recipes/Ez-with-Pressure-Cooker" class="col text-center category__link">
+        <div class="category__img shadow">
+            <img class="ezWithPressureCookerCard" src="/img/EzMealzPictures/pressureCookerCard.jpg" alt="Ez with Pressure Cooker" loading="lazy">
+        </div>
+        <div class="pt-1">Ez with Pressure Cooker</div>
+    </a>
+
+    <a href="/recipes/Ez-with-Slow-Cooker" class="col text-center category__link">
+        <div class="category__img shadow">
+            <img  src="/img/EzMealzPictures/BbqChicken.jpg" alt="Ez With Crockpot" loading="lazy">
+        </div>
+        <div class="pt-1">Ez with Slow Cooker</div>
+    </a>
+    
+  
+
+</div>
+
+<!-- Categories end -->
+
+<!-- Latest Recipe Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Latest Recipes</h2>
+        <a href="/latest-recipes" class="ms-auto"> View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(food != '') { %>
+            <% food.latest.forEach(function(recipe, index) { %>
+            <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+
+                <div class="category__img category__img--large shadow">
+                    <img class="ezAndHealthyCard" src="/img/EzMealzPictures/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%= recipe.name %></div>
+
+            </a>
+            <% }) %>
+        <% } %>
+
+
+       
+    </div>
+</section>
+
+<!-- Latest Recipes End -->
+
+
+<!-- Healthy Recipe Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Ez and Healthy Recipes</h2>
+        <a href="/recipes/Ez-and-Healthy" class="ms-auto"> View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(typeof food.Healthy !== 'undefined' && food.Healthy.length > 0) { %>
+            <% food.Healthy.forEach(function(recipe, index) { %>
+            <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+
+                <div class="category__img category__img--large shadow">
+                    <img class="ezAndHealthyCard" src="/img/EzMealzPictures/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%= recipe.name %></div>
+
+            </a>
+            <% }) %>
+        <% } else { %>
+
+            <p>Could not find any recipes :(</p>
+
+        <% } %>
+
+
+       
+    </div>
+</section>
+
+<!-- Healthy Recipes End -->
+
+
+
+<!-- Cheap Recipe Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Ez and Cheap Recipes</h2>
+        <a href="/recipes/Ez-and-Cheap" class="ms-auto"> View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(typeof food.Cheap !== 'undefined' && food.Cheap.length > 0) { %>
+            <% food.Cheap.forEach(function(recipe, index) { %>
+            <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+
+                <div class="category__img category__img--large shadow">
+                    <img class="ezAndHealthyCard" src="/img/EzMealzPictures/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%= recipe.name %></div>
+
+            </a>
+            <% }) %>
+        <% } else { %>
+
+            <p>Could not find any recipes :(</p>
+
+       <% } %>
+    </div>
+</section>
+
+<!-- Cheap Recipes End -->
+
+
+
+
+<!-- Pressure Cooker Recipe Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Ez with Pressure Cooker Recipes</h2>
+        <a href="/recipes/Ez-with-Pressure-Cooker" class="ms-auto"> View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(typeof food.PressureCooker !== 'undefined' && food.PressureCooker.length > 0) { %>
+            <% food.PressureCooker.forEach(function(recipe, index) { %>
+            <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+
+                <div class="category__img category__img--large shadow">
+                    <img class="ezAndHealthyCard" src="/img/EzMealzPictures/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%= recipe.name %></div>
+
+            </a>
+            <% }) %>
+        <% } else { %>
+
+            <p>Could not find any recipes :(</p>
+
+       <% } %>
+    </div>
+</section>
+
+<!-- Pressure Cooker Recipes End -->
+
+
+
+
+
+
+
+
+<!-- Slow Cooker Recipe Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Ez with Slow-Cooker</h2>
+        <a href="/recipes/Ez-with-Slow-Cooker" class="ms-auto"> View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(typeof food.SlowCooker !== 'undefined' && food.SlowCooker.length > 0) { %>
+            <% food.SlowCooker.forEach(function(recipe, index) { %>
+            <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+
+                <div class="category__img category__img--large shadow">
+                    <img class="ezAndHealthyCard" src="/img/EzMealzPictures/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%= recipe.name %></div>
+
+            </a>
+            <% }) %>
+        <% } else { %>
+
+            <p>Could not find any recipes :(</p>
+
+       <% } %>
+    </div>
+</section>
+
+<!-- Slow Cooker Recipes End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Subscribe section Start -->
+
+
+<section class="px-4 py-5 my-4 text-center">
+
+    <img  class="submit-image" src="/img/EzMealzPictures/submit.jpg" class="d-block mx-auto mb-4 img-fluid" alt="Submit an EZ recipe!" width = "566" height="208" loading="lazy">
+    <h1 class="display-5 fw-bold"> Subscribe to EzMealz today!</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+            Get access to exclusive EzMealz, right to your email inbox!
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/subscribe" class="btn btn-primary btn-dark btn-lg"> Submit Recipe</a>
+        </div>
+    </div>
+
+</section>

@@ -1,7 +1,10 @@
 require('../models/database');
 const Category = require('../models/Category');
 const Recipe = require('../models/Recipe');
+const User = require("../models/users");
 const { search } = require('../routes/recipeRoutes');
+
+const Subscriber = require("../models/Subscriber");
 
 /**
  * GET / 
@@ -20,9 +23,14 @@ exports.homepage = async(req, res) => {
         const Cheap = await Recipe.find({'category': 'Ez and Cheap'}).limit(limitNum);
         const PressureCooker = await Recipe.find({'category': 'Ez with Pressure Cooker'}).limit(limitNum);
         const SlowCooker = await Recipe.find({'category': 'Ez with Slow Cooker'}).limit(limitNum);
-
+        const user = req.session.user;
         const food = {latest, Healthy, Cheap, PressureCooker, SlowCooker};
-        res.render('index',{title: 'EzMealz - Homepage', categories, food});
+        if (user) {
+            res.render('user-page',{title: 'EzMealz - Homepage', categories, food, user});
+        } else {
+            res.render('index',{title: 'EzMealz - Homepage', categories, food});
+        }
+        
 
     } catch (error) {
         res.status(500).send({message: error.message || "error occured"})
@@ -32,14 +40,16 @@ exports.homepage = async(req, res) => {
 }
 
 
+
 exports.getRecipe = async(req, res) => {
     try {
 
         let recipeID = req.params.id;
 
         const recipe = await Recipe.findById(recipeID);
+        const user = req.session.user;
 
-        res.render('recipe', {title: 'EzMealz - Recipe', recipe});
+        res.render('recipe', {title: 'EzMealz - Recipe', recipe,user});
     } catch (error) {
         res.status(500).send({message: error.message || "Error"});
     }
@@ -52,7 +62,8 @@ exports.seeRecipes = async(req, res) => {
         let recipesID = req.params.id.replace(/-/g," ");
 
         const recipesByCategory = await Recipe.find({'category': recipesID});
-        res.render('recipes', {title: 'EzMealz - Recipes', recipesByCategory});
+        const user = req.session.user;
+        res.render('recipes', {title: 'EzMealz - Recipes', recipesByCategory,user});
     } catch (error) {
         res.status(500).send({message: error.message || "Error"});
     }
@@ -69,7 +80,8 @@ exports.search = async(req, res) => {
         let searchTerm = req.body.searchTerm;
 
         let recipe = await Recipe.find( {$text: {$search: searchTerm, $diacriticSensitive: true}} );
-        res.render('search', {title: 'EzMealz - Search', recipe});
+        const user = req.session.user;
+        res.render('search', {title: 'EzMealz - Search', recipe, user});
 
     }catch (error) {
         res.status(500).send({message: error.message || "Error Occurred"});
@@ -85,14 +97,56 @@ exports.latestRecipes = async(req, res) => {
 
         const limitNum = 10;
         const recipe = await Recipe.find({}).sort({_id: -1}).limit(limitNum);
-
-        res.render('latestRecipes', {title: 'EzMealz - Recipe', recipe});
+        const user = req.session.user;
+        res.render('latestRecipes', {title: 'EzMealz - Recipe', recipe, user});
     } catch (error) {
         res.status(500).send({message: error.message || "Error"});
     }
 }
 
+exports.subscribeUser = async(req, res) => {
+    try {
+        const user = req.session.user;
+        const infoErrorsObj = req.flash('infoErrors');
+        const infoSubmitObj = req.flash('infoSubmit');
+        res.render('subscribe', {title: "subscribe", infoErrorsObj, infoSubmitObj, user});
+    } catch (error) {
+        res.status(500).send({message: error.message || "Error"});
+    }
+}
 
+exports.subscribeOnPost = async(req, res) => {
+
+    try {
+        
+        const newSubscriber = new Subscriber({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            addressFirstLine: req.body.AddressFirstLine,
+            addressSecondLine: req.body.AddressSecondLine,
+            city: req.body.city,
+            state: req.body.state,
+            zipCode: req.body.zipCode,
+            creditCardNumber: req.body.creditCardNumber,
+            expirationDate: req.body.expDate,
+            securityCode: req.body.securityCode,
+        });
+
+        
+
+        await newSubscriber.save();
+        req.flash('infoSubmit', 'You have subscribed!');
+        res.redirect('/subscribe');
+    } catch (error) {
+        res.json(error)
+        req.flash('infoErrors', error);
+        res.redirect('subscribe');
+    }
+
+
+    
+}
 
 
 // GET /surprise-recipe
@@ -103,9 +157,9 @@ exports.surpriseRecipe = async(req, res) => {
         let count = await Recipe.find().countDocuments();
         let random = Math.floor(Math.random() * count);
         let recipe = await Recipe.findOne().skip(random).exec();
- 
+        const user = req.session.user;
 
-        res.render('surpriseRecipe', {title: 'EzMealz - Recipe', recipe});
+        res.render('surpriseRecipe', {title: 'EzMealz - Recipe', recipe, user});
     } catch (error) {
         res.status(500).send({message: error.message || "Error"});
     }
@@ -113,7 +167,8 @@ exports.surpriseRecipe = async(req, res) => {
 
 exports.aboutPage = async(req, res) => {
     try {
-        res.render('aboutPage', {title: 'EzMealz - About'} );
+        const user = req.session.user;
+        res.render('aboutPage', {title: 'EzMealz - About', user} );
     } catch {
         res.status(500).send({message: error.message || "Error"});
     }
@@ -122,11 +177,14 @@ exports.aboutPage = async(req, res) => {
 
 exports.contact = async(req, res) => {
     try {
-        res.render('contact', {title: 'EzMealz - Contact'})
+        const user = req.session.user;
+        res.render('contact', {title: 'EzMealz - Contact', user})
     } catch {
         res.status(500).send({message: error.message || "Error"});
     }
 }
+
+
 
 
 
@@ -170,12 +228,12 @@ exports.contact = async(req, res) => {
 
 // async function insertRecipeData() {
 
-//     try{
-//         await Recipe.insertMany([
+//      try{
+//        await Recipe.insertMany([
 //             {
-//                 "name": "Roasted Tomato Tart",
-//                 "description": "This tart pairs beautifully with Mushroom and Spinach Gnocchi, as shown. The flavor intertwines together and the presentation is immaculate. Impress your guests at your next dinner party with this dish!",
-//                 "link": "https://cooking.nytimes.com/recipes/1020373-roasted-tomato-tart-with-ricotta-and-pesto",
+//                 "name": "Sheet-Pan Sesame Tofu and Red Onions",
+//                 "description": "Busy weeknight but still want to eat good? We got a recipe for you! This recipe is simple yet gourmet, utilizing the power of tofu to its fullest. Press the tofu for 15 minutes for a more firm texture!",
+//                 "link": "https://cooking.nytimes.com/recipes/1023462-sheet-pan-sesame-tofu-and-red-onions",
 //                 "category": "Ez and Cheap",
 //                 "image": "tomatoTart.jpg"
 //             },
@@ -407,9 +465,9 @@ exports.contact = async(req, res) => {
 //             },
 
 
-//         ]);
+//      ]);
 //     } catch (error) {
-//         console.log('err', + error)
+//        console.log('err', + error)
 //     }
 // }
 

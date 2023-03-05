@@ -44,6 +44,7 @@
                     <a href="/contact" class="nav-link px-2 link-secondary">Contact</a>
                 </li>
 
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Recipes
@@ -55,9 +56,27 @@
                       <li><a class="dropdown-item" href="/recipes/Ez-with-Pressure-Cooker">Ez with Pressure Cooker</a></li>
                       <li><a class="dropdown-item" href="/recipes/Ez-with-Slow-Cooker">Ez with Slow Cooker</a></li>
                     </ul>
+                </li> 
+                <% try { if (user) { %>
+                <li>
+                    <a href="/auth/logout" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">Sign Out</a>
                 </li>
+                <% } else {%>
+                    <a href="/auth/login" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">Log In</a>
+                    <a href="/auth/create-user" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">Sign Up</a>
+                <% } } catch { %>
+                    <a href="/auth/login" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">Log In</a>
+                    <a href="/auth/create-user" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">Sign Up</a>
+                <% } %>
 
-            </ul>
+                <% try { if (user == "admin") { %>
+                    <li>
+                        <a href="/auth/view-subscribers" class="btn btn-secondary btn-sm px-2 mt-1 mx-1" role="button" aria-disabled="true">View Subscribers</a>
+                    </li>
+                <% } } catch { %>
+                </ul>
+                <% } %>
+            </ul> 
 
             <div class="col-md-3 text-end">
                 <form action="/search" method="POST">

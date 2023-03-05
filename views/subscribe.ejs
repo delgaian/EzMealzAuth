@@ -1,0 +1,124 @@
+<div class="px-4 py-5 my-5 text-center"> 
+    <h1 class="display-5 fw-bold"> Subscribe to EzMealz!</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead">
+            For a low price of $5.99 per month you can receive exclusive EzMealz sent to your email inbox!
+            You will also be able to browse our site ad-free and receive a monthly surprise EzMealz merch every month!
+        </p>
+    </div>
+
+</div>
+
+
+
+<div class="row justify-content-center">
+
+    <% if(infoSubmitObj != '') { %>
+        <div class="alert alert-success col-8" role="alert">
+            <%= infoSubmitObj %>
+        </div>
+    <% } %>
+
+    <% if(infoErrorsObj != '') { %>
+        <div class="alert alert-danger col-8" role="alert">
+            <%= infoErrorsObj[0].message %>
+        </div>
+    <% } %>
+
+    <div class="col-8">
+        <form action="/subscribe" method="POST">
+
+            <div class="row-g-3">
+
+                <div class="col-12 py-3">
+                    <label for="name" class="form-label px-2">
+                        First Name
+                    </label>
+                    <input type="name" name="firstName" id="first-name" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3">
+                    <label for="name" class="form-label px-2">
+                        Last Name
+                    </label>
+                    <input type="name" name="lastName" id="last-name" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3">
+                    <label for="email" class="form-label px-2">
+                        Email
+                    </label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3">
+                    <label for="Address-first-line" class="form-label px-2">
+                        Address First Line
+                    </label>
+                    <input type="Address" name="AddressFirstLine" id="Address-first-line" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3">
+                    <label for="Address-second-line" class="form-label px-2">
+                        Address Second Line (if applicable)
+                    </label>
+                    <input type="Address" name="AddressSecondLine" id="Address-second-line" class="form-control">
+                </div>
+
+                <div class="col-12 py-3 px-5">
+                    <label for="city" class="form-label px-2">
+                        City
+                    </label>
+                    <input type="Address" name="city" id="city" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3 px-5">
+                    <label for="state" class="form-label px-2">
+                        State
+                    </label>
+                    <input type="Address" name="state" id="state" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3 px-5">
+                    <label for="zip-code" class="form-label px-2">
+                        Zip Code
+                    </label>
+                    <input type="Address" name="zipCode" id="zip-code" class="form-control" required>
+                </div>
+
+            </div>
+
+            <div class="row-g-3">
+
+                <div class="col-12 py-3">
+                    <label for="Number" class="form-label px-2">
+                        Credit Card Number
+                    </label>
+                    <input type="text" name="creditCardNumber" id="credit-card-number" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3">
+                    <label for="exp-date" class="form-label px-2">
+                        Expiration Date
+                    </label>
+                    <input type="text" name="expDate" id="exp-date" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-3" >
+                    <label for="security-code" class="form-label px-2">
+                        Security Code
+                    </label>
+                    <input type="password" name="securityCode" id="security-code" class="form-control" required>
+                </div>
+
+
+            </div>
+
+            <div class="col-12 py-3">
+                <button type="submit" class="btn btn-secondary"> Subscribe! </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
