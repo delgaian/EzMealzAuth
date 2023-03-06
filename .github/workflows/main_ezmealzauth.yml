@@ -53,4 +53,5 @@ jobs:
           app-name: 'EzMealzAuth'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_51A5273C8B164D2D9EA955622E1A5490 }}
+          app-settings-json: '{"mongoDb" : "${{ env.DATABASE_URL }}" }'
           package: .
